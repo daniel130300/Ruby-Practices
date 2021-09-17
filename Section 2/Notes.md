@@ -206,8 +206,51 @@ User.identify_youself # to run this class method you don't need an instance of u
 # you can directly call the class User
 ```
 
-Account
-accounts@escolarea.com
-s33kingknol3dg3
+## Create a Module and Methods
+
+```
+module Crud
+    require 'bcrypt'
+    puts "module CRUD activated"
+
+    def Crud.create_hash_digest(password)
+        BCrypt::Password.create(password)
+    end
+
+    def Crud.verify_hash_digest(password)
+        BCrypt::Password.new(password)
+    end
+
+    def Crud.create_secure_users(list_of_users)
+        list_of_users.each do |user_record|
+            user_record[:password] = create_hash_digest(user_record[:password])
+        end
+
+        return list_of_users
+    end
+
+    def Crud.authenticate_user(username, password, list_of_users)
+        list_of_users.each do |user_record|
+            if user_record[:username] == username && verify_hash_digest(user_record[:password]) == password
+                return user_record
+            end
+        end
+        "Credentials were not correct"
+    end
+end
+```
+
+## Require Relative and Include
+
+### Require
+The require method does what include does in most other programming languages: run another file. It also tracks what you've required in the past and won't require the same file twice. 
+
+### Include
+
+The include method takes all the methods from another module and includes them into the current module. 
+
+*The include method is the primary way to "extend" classes with other modules (usually referred to as mix-ins).*
+
+
 
 
