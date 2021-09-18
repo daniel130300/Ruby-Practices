@@ -288,9 +288,11 @@ gem list rails
 
 ```
 # Start postgresql server
+alias pg_start="launchctl load ~/Library/LaunchAgents"
 pg_start
 
 #Stop postgresql server
+alias pg_stop="launchctl unload ~/Library/LaunchAgents"
 pg_stop
 
 #Access postgresql shell
