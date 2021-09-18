@@ -256,7 +256,7 @@ The include method takes all the methods from another module and includes them i
 *The include method is the primary way to "extend" classes with other modules (usually referred to as mix-ins).*
 
 
-# Useful Commands
+# Useful Ruby Commands
 
 ```
 #Command to change current ruby version
@@ -282,5 +282,18 @@ rails _5.2.6_ new test_app_5
 
 #Command to see all rails versions installed
 gem list rails
+```
+
+# Useful Postgres Commands
+
+```
+# Start postgresql server
+pg_start
+
+#Stop postgresql server
+pg_stop
+
+#Access postgresql shell
+psql
 ```
 
