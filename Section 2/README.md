@@ -252,5 +252,28 @@ The include method takes all the methods from another module and includes them i
 *The include method is the primary way to "extend" classes with other modules (usually referred to as mix-ins).*
 
 
+# Useful Commands
 
+```
+#Command to change current ruby version
+rvm use 2.7.2
+
+# Command to change the default ruby version running
+rvm --default use 2.6.3
+
+# Command to list all ruby available versions to install
+rvm list known
+
+# Command to list all ruby versions installed
+rvm list 
+
+#Command to create a new rails app
+rails new blog
+
+#Command to create a new rails app with a specified version
+rails _5.2.6_ new test_app_5
+
+#Command to see all rails versions installed
+gem list rails
+```
 
