@@ -1,3 +1,7 @@
+# EXTREMELY IMPORTANT NOTE
+
+Install the newest version of ruby and use the latest verion of rails in order to deploy in heroku-20
+
 # Ruby Language Basics
 
 Everything in Ruby is an object, without exception
