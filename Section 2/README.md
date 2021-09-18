@@ -271,6 +271,9 @@ rvm list known
 # Command to list all ruby versions installed
 rvm list 
 
+#Command to create a new rails app using postgres as default db
+rails new my_app_name --database=postgresql
+
 #Command to create a new rails app
 rails new blog
 
