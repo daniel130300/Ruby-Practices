@@ -270,18 +270,37 @@ rvm list known
 
 # Command to list all ruby versions installed
 rvm list 
+```
 
-#Command to create a new rails app using postgres as default db
-rails new my_app_name --database=postgresql
+# Useful Ruby on Rails Commands
 
-#Command to create a new rails app
+```
+# Command to create a new rails app using postgres as default db
+rails new my_app_name --d=postgresql
+
+# Command to create a new rails app
 rails new blog
 
-#Command to create a new rails app with a specified version
+# Command to create a new rails app with a specified version
 rails _5.2.6_ new test_app_5
 
-#Command to see all rails versions installed
+# Command to see all rails versions installed
 gem list rails
+
+# Command to generate controllers, models, views fast
+rails generate controller pages
+rails generate view articles
+rails generate model article
+rails generate migration create_articles
+
+# Command to create CRUDS fast
+rails generate scaffold Article title:text description:text
+
+# Command to migrate db 
+rails db:migrate
+
+# Command to show all routes 
+rails routes --expanded
 ```
 
 # Useful Postgres Commands
@@ -291,11 +310,11 @@ gem list rails
 alias pg_start="launchctl load ~/Library/LaunchAgents"
 pg_start
 
-#Stop postgresql server
+# Stop postgresql server
 alias pg_stop="launchctl unload ~/Library/LaunchAgents"
 pg_stop
 
-#Access postgresql shell
+# Access postgresql shell
 psql
 ```
 
