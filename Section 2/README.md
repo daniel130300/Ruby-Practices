@@ -304,6 +304,7 @@ rails routes --expanded
 ```
 
 # Useful Rails Console Commands 
+We can work the table information that we want from the db as a class
 
 ```
 # Access rails console
@@ -312,9 +313,29 @@ rails c
 # Show all table records
 Table.all
 
-# Insert into table
-Table.create(title:"Article 1", description: "Hello world")
+# Read a table record by its id
+Article.find(2)
 
+# Insert record into table
+    # 1st way
+    Table.create(title:"Article 1", description: "Hello world")
+
+    # 2nd way (Preferred)
+    article = Article.new
+    article.title = "Article 2"
+    article.description = "article 2 desc"
+    article.save
+
+# Update table record
+article = Article.find(2)
+article.title = "Article 2 updated"
+article.description = "Article 2 description updated"
+article.save
+
+# Delete table record
+
+article = Article.find(2)
+article.destroy
 ```
 
 # Useful Postgres Terminal Commands
