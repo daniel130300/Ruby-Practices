@@ -256,7 +256,7 @@ The include method takes all the methods from another module and includes them i
 *The include method is the primary way to "extend" classes with other modules (usually referred to as mix-ins).*
 
 
-# Useful Ruby Commands
+# Useful RVM Terminal Commands
 
 ```
 #Command to change current ruby version
@@ -272,7 +272,7 @@ rvm list known
 rvm list 
 ```
 
-# Useful Ruby on Rails Commands
+# Useful Rails Terminal Commands
 
 ```
 # Command to create a new rails app using postgres as default db
@@ -287,7 +287,7 @@ rails _5.2.6_ new test_app_5
 # Command to see all rails versions installed
 gem list rails
 
-# Command to generate controllers, models, views fast
+# Commands to generate controllers, models, views, migration files fast
 rails generate controller pages
 rails generate view articles
 rails generate model article
@@ -303,7 +303,21 @@ rails db:migrate
 rails routes --expanded
 ```
 
-# Useful Postgres Commands
+# Useful Rails Console Commands 
+
+```
+# Access rails console
+rails c
+
+# Show all table records
+Table.all
+
+# Insert into table
+Table.create(title:"Article 1", description: "Hello world")
+
+```
+
+# Useful Postgres Terminal Commands
 
 ```
 # Start postgresql server
