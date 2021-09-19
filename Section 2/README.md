@@ -255,8 +255,9 @@ The include method takes all the methods from another module and includes them i
 
 *The include method is the primary way to "extend" classes with other modules (usually referred to as mix-ins).*
 
+# Useful Commands
 
-# Useful RVM Terminal Commands
+# RVM
 
 ```
 #Command to change current ruby version
@@ -272,7 +273,7 @@ rvm list known
 rvm list 
 ```
 
-# Useful Rails Terminal Commands
+# Rails
 
 ```
 # Command to create a new rails app using postgres as default db
@@ -303,12 +304,30 @@ rails db:migrate
 rails routes --expanded
 ```
 
-# Useful Rails Console Commands 
+# Postgres
+
+```
+# Start postgresql server
+alias pg_start="launchctl load ~/Library/LaunchAgents"
+pg_start
+
+# Stop postgresql server
+alias pg_stop="launchctl unload ~/Library/LaunchAgents"
+pg_stop
+
+# Access postgresql shell
+psql
+```
+
+# Rails Console Commands
 We can work the table information that we want from the db as a class
 
 ```
 # Access rails console
 rails c
+
+# Update console when model has been changed
+reload!
 
 # Show all table records
 Table.all
@@ -333,23 +352,11 @@ article.description = "Article 2 description updated"
 article.save
 
 # Delete table record
-
 article = Article.find(2)
 article.destroy
+
+# Display errors when doing any CRUD operations
+article.errors.full_messages
 ```
 
-# Useful Postgres Terminal Commands
-
-```
-# Start postgresql server
-alias pg_start="launchctl load ~/Library/LaunchAgents"
-pg_start
-
-# Stop postgresql server
-alias pg_stop="launchctl unload ~/Library/LaunchAgents"
-pg_stop
-
-# Access postgresql shell
-psql
-```
 
