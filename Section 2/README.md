@@ -357,6 +357,26 @@ article.destroy
 
 # Display errors when doing any CRUD operations
 article.errors.full_messages
+
+# One to Many Query
+user = User.first
+user.articles
+
+# One to Many Insert
+    # First way
+    user_1 = User.First
+    article = Article.new(title:"new title", description:"new description for art", user_id: user_1.id)
+    
+    # Second way
+    user_1 = User.First
+    user_1.articles.build(title:"new title", description:"new description for art")
+    article = _
+    article.save
+
+    # Third way (Easiest One)
+    user_1 = User.First
+    article = Article.new(title:"new title", description:"new description for art")
+    user_1 << article
 ```
 
 
