@@ -297,8 +297,11 @@ rails generate migration create_articles
 # Command to create CRUDS fast
 rails generate scaffold Article title:text description:text
 
-# Command to create TESTS fast 
+# Command to create UNIT CONTROLLER TESTS fast 
 rails generate test_unit:scaffold category
+
+# Command to create INTEGRATION TESTS fast
+rails generate integration_test create_category_test
 
 # Command to migrate db 
 rails db:migrate
@@ -390,6 +393,12 @@ user.articles
     user_1 = User.First
     article = Article.new(title:"new title", description:"new description for art")
     user_1 << article
+
+# Many to Many Insert
+article = Article.new(title:"some title", descrip
+tion:"some description", user: User.find_by(email:"daniel13030
+0@outlook.com"), target_table_not_itermidiate_table_ids:[1,2]) 
+article.save
 ```
 
 
