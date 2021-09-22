@@ -297,8 +297,18 @@ rails generate migration create_articles
 # Command to create CRUDS fast
 rails generate scaffold Article title:text description:text
 
+# Command to create TESTS fast 
+rails generate test_unit:scaffold category
+
 # Command to migrate db 
 rails db:migrate
+
+# Command to run all tests
+rails test
+
+# Command to run specific test 
+
+rails test/controller/categories_controller_test.rb
 
 # Command to show all routes 
 rails routes --expanded
@@ -354,6 +364,9 @@ article.save
 # Delete table record
 article = Article.find(2)
 article.destroy
+
+# Delete all Records in table
+Article.delete_all
 
 # Display errors when doing any CRUD operations
 article.errors.full_messages
