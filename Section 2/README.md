@@ -399,6 +399,19 @@ article = Article.new(title:"some title", descrip
 tion:"some description", user: User.find_by(email:"daniel13030
 0@outlook.com"), target_table_not_itermidiate_table_ids:[1,2]) 
 article.save
+
+# Display all records from console as table
+
+1. Add the hirb gem to the gemfile
+    gem 'hirb'
+
+2. Run bundle install
+    bundle install
+
+3. Enable it from the rails console
+    Hirb.enable
+
+4. DONE!!
 ```
 
 
