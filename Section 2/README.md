@@ -310,11 +310,13 @@ rails db:migrate
 rails test
 
 # Command to run specific test 
-
 rails test/controller/categories_controller_test.rb
 
 # Command to show all routes 
 rails routes --expanded
+
+# Command to edit rails crendentials file
+EDITOR="code --wait" rails credentials:edit
 ```
 
 # Postgres
