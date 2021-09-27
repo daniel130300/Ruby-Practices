@@ -396,6 +396,9 @@ user.articles
     article = Article.new(title:"new title", description:"new description for art")
     user_1 << article
 
+# Many to Many Controller and Model Creation
+rails g resource UserStock user:references stock:references
+
 # Many to Many Insert
 article = Article.new(title:"some title", descrip
 tion:"some description", user: User.find_by(email:"daniel13030
